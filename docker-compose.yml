@@ -1,0 +1,12 @@
+services:
+  finsight:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      FINSIGHT_MODE: ${FINSIGHT_MODE:-offline}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+    volumes:
+      - ./web:/app/web:ro
