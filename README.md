@@ -1,6 +1,6 @@
 # FinSight
 
-FinSight is a project I built to answer questions about company financial filings (like the 10-K annual reports companies file with the SEC) without making things up. Normally if you ask a language model a question about a document, it can hallucinate an answer that sounds right but isn't in the document. FinSight avoids that by first finding the relevant parts of the filing, then asking the model to answer using only those parts, and finally double-checking that every sentence of the answer is actually backed by the source text. It also shows which piece of the document each fact came from, so the answers are traceable.
+FinSight is a collaborative project designed to answer questions about corporate financial filings, including SEC Form 10-K annual reports. It uses retrieval-augmented generation (RAG) to retrieve relevant passages and guide the language model toward responses grounded in the source material. A verification step evaluates word overlap between answer sentences and retrieved passages to flag potentially unsupported statements. Source references allow users to trace responses back to the underlying filings, improving transparency and helping reduce the risk of hallucinations.
 
 ## How it works
 
